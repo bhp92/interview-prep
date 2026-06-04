@@ -14,9 +14,7 @@ companies/
 
 ## Companies
 
-```
 | Company | Status | Rounds |
 |---------|--------|--------|
 | [LogicMonitor](companies/logic-monitor/) | ❌ No callback | Coding test |
 | [Aziro](companies/aziro/) | ❌ No callback | Screening + Technical |
-```
