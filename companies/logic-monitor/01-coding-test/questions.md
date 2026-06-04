@@ -1,9 +1,9 @@
 # LogicMonitor — Coding Test
 
-**Platform:** Qualified.io
-**Link:** https://www.qualified.io/assess/5d30c3ceccd7c8001355109c?invite=girdzG6hzaTFOw
-**Duration:** 1 hour
-**Language used:** Python
+- **Platform:** Qualified.io
+- **Link:** https://www.qualified.io/assess/5d30c3ceccd7c8001355109c?invite=girdzG6hzaTFOw
+- **Duration:** 1 hour
+- **Language used:** Python
 
 ---
 
