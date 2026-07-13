@@ -226,6 +226,538 @@ Lowercase letters come after capital letters in the ASCII table (hence they have
 
 ---
 
+Great! Let's continue with **Chapter 10**.
+
+---
+
+# 10 Python Basics – Indentation
+
+## Introduction
+
+One of the first things programmers notice when learning Python is that its syntax looks different from many other programming languages.
+
+Unlike languages such as:
+
+* C
+* C++
+* Java
+* JavaScript
+
+Python does **not** use:
+
+* Curly braces `{ }` to define blocks of code.
+* Semicolons `;` to terminate statements.
+
+Instead, Python uses **indentation**.
+
+Indentation is one of Python's defining features and is **part of the language's syntax**, not just a formatting style.
+
+---
+
+## What is Indentation?
+
+## Definition
+
+> **Indentation** is the whitespace (spaces or tabs) placed at the beginning of a line to indicate that the line belongs to a particular block of code.
+
+Example:
+
+```python
+if True:
+    print("Hello")
+```
+
+Notice the spaces before:
+
+```python
+print("Hello")
+```
+
+Those spaces are called **indentation**.
+
+---
+
+## Why Does Python Use Indentation?
+
+Most programming languages separate code blocks using braces.
+
+Example (C / C++ / Java):
+
+```c
+if (age >= 18)
+{
+    printf("Adult");
+}
+```
+
+The braces indicate that:
+
+```c
+printf("Adult");
+```
+
+belongs to the `if` statement.
+
+---
+
+Python removes the braces completely.
+
+Instead, indentation tells Python where a block starts and ends.
+
+Python version:
+
+```python
+if age >= 18:
+    print("Adult")
+```
+
+The indentation alone tells Python that the `print()` statement belongs to the `if` block.
+
+---
+
+## Comparison with Other Languages
+
+### C / C++ / Java
+
+```c
+if (condition)
+{
+    statement1;
+    statement2;
+}
+```
+
+---
+
+### Python
+
+```python
+if condition:
+    statement1
+    statement2
+```
+
+No braces.
+
+No semicolons.
+
+Only indentation.
+
+---
+
+## Colon (`:`)
+
+Notice that Python uses a colon after statements that introduce a block.
+
+Examples:
+
+```python
+if age >= 18:
+```
+
+```python
+for i in range(5):
+```
+
+```python
+while True:
+```
+
+```python
+def greet():
+```
+
+The colon tells Python:
+
+> "A new block of code begins on the next line."
+
+---
+
+## Creating a Block
+
+Example:
+
+```python
+if True:
+    print("Line 1")
+    print("Line 2")
+    print("Line 3")
+```
+
+All three `print()` statements belong to the `if` block because they have the same indentation.
+
+---
+
+## Ending a Block
+
+A block ends when the indentation returns to a previous level.
+
+Example:
+
+```python
+if True:
+    print("Inside")
+
+print("Outside")
+```
+
+Output:
+
+```text
+Inside
+Outside
+```
+
+Explanation:
+
+```text
+if block
+
+↓
+
+print("Inside")
+
+Block ends
+
+↓
+
+print("Outside")
+```
+
+---
+
+## Multiple Statements in the Same Block
+
+Example:
+
+```python
+name = "Alice"
+
+if name == "Alice":
+    print("Welcome")
+    print("Login Successful")
+    print("Loading Dashboard")
+
+print("Program Finished")
+```
+
+Output:
+
+```text
+Welcome
+Login Successful
+Loading Dashboard
+Program Finished
+```
+
+---
+
+## Nested Blocks
+
+A block may contain another block.
+
+This is called **nesting**.
+
+Example:
+
+```python
+age = 20
+
+if age >= 18:
+    print("Adult")
+
+    if age >= 60:
+        print("Senior Citizen")
+
+print("Done")
+```
+
+Notice the second `if` is indented further.
+
+Python understands that it belongs inside the first `if`.
+
+---
+
+### Visual Representation
+
+```text
+if age >= 18:
+│
+├── print("Adult")
+│
+└── if age >= 60:
+      │
+      └── print("Senior Citizen")
+
+print("Done")
+```
+
+---
+
+# How Much Should We Indent?
+
+According to **PEP 8** (Python's official style guide):
+
+Use **4 spaces** for each indentation level.
+
+Example:
+
+```python
+if True:
+    print("Python")
+```
+
+---
+
+## Tabs vs Spaces
+
+Python allows both:
+
+* Tabs
+* Spaces
+
+However, **PEP 8 recommends using 4 spaces**.
+
+Modern editors (VS Code, PyCharm, etc.) automatically insert spaces when you press the **Tab** key.
+
+# Comment:
+
+# The transcript mentions pressing the Tab key.
+
+# Technically, Python does not require "tabs".
+
+# It requires consistent indentation.
+
+# Modern Python code uses four spaces.
+
+---
+
+## Never Mix Tabs and Spaces
+
+Bad:
+
+```python
+if True:
+<Tab>print("Hello")
+<Spaces>print("World")
+```
+
+This may produce:
+
+```text
+TabError:
+inconsistent use of tabs and spaces
+```
+
+Always use one style consistently.
+
+---
+
+# Indentation is Mandatory
+
+Unlike many programming languages, indentation is **not optional**.
+
+Incorrect:
+
+```python
+if True:
+print("Hello")
+```
+
+Python raises:
+
+```text
+IndentationError:
+expected an indented block
+```
+
+---
+
+Correct:
+
+```python
+if True:
+    print("Hello")
+```
+
+---
+
+## Another Example
+
+Incorrect:
+
+```python
+age = 20
+
+if age >= 18:
+print("Adult")
+
+print("Done")
+```
+
+Error:
+
+```text
+IndentationError
+```
+
+Correct:
+
+```python
+age = 20
+
+if age >= 18:
+    print("Adult")
+
+print("Done")
+```
+
+---
+
+# Common Beginner Mistakes
+
+## Mistake 1
+
+Forgetting indentation.
+
+Incorrect:
+
+```python
+if True:
+print("Python")
+```
+
+---
+
+## Mistake 2
+
+Adding unnecessary indentation.
+
+Incorrect:
+
+```python
+print("Hello")
+
+    print("World")
+```
+
+Python raises:
+
+```text
+IndentationError:
+unexpected indent
+```
+
+---
+
+## Mistake 3
+
+Mixing tabs and spaces.
+
+Example:
+
+```python
+if True:
+<Tab>print("Python")
+<4 spaces>print("Programming")
+```
+
+This may result in:
+
+```text
+TabError
+```
+
+---
+
+## Mistake 4
+
+Using inconsistent indentation levels.
+
+Incorrect:
+
+```python
+if True:
+    print("One")
+        print("Two")
+```
+
+Python cannot determine which block the second statement belongs to.
+
+---
+
+# Why Did Python Choose Indentation?
+
+When Python was designed, its creator, **Guido van Rossum**, wanted code to be:
+
+* Easy to read
+* Easy to understand
+* Difficult to format poorly
+
+In many languages, programmers often write:
+
+```c
+if (condition){
+printf("Hello");
+}
+```
+
+or
+
+```c
+if(condition)
+    printf("Hello");
+```
+
+Even though both are valid, inconsistent formatting makes code harder to read.
+
+Python enforces a consistent structure.
+
+This improves:
+
+* Readability
+* Maintainability
+* Team collaboration
+
+# Comment:
+
+# This philosophy is reflected in *The Zen of Python*:
+
+#
+
+# "Readability counts."
+
+---
+
+# How Python Reads Indentation
+
+Consider:
+
+```python
+if True:
+    print("A")
+    print("B")
+
+print("C")
+```
+
+Python interprets it as:
+
+```text
+IF
+
+├── print("A")
+├── print("B")
+
+END IF
+
+print("C")
+```
+
+Notice that `print("C")` is **not** inside the `if` block because its indentation returned to the previous level.
+
+---
+
 ## 8. Epilogue Script Notations
 
 * जय श्रीराम

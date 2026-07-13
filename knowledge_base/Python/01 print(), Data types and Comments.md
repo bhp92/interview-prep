@@ -643,3 +643,94 @@ This is an editor feature, **not a Python language feature**.
   * your future self when revisiting the code
 * Single-line comments begin with `#`.
 * Python has **no dedicated multi-line comment syntax**; use `#` on every line.
+
+---
+
+# Indentation with Nested Blocks
+
+Example:
+
+```python
+age = 25
+
+if age >= 18:
+    print("Adult")
+
+    if age >= 21:
+        print("Can enter")
+
+    print("Inside Outer Block")
+
+print("Outside")
+```
+
+Visual representation:
+
+```text
+if age >= 18
+│
+├── print("Adult")
+│
+├── if age >= 21
+│      │
+│      └── print("Can enter")
+│
+└── print("Inside Outer Block")
+
+print("Outside")
+```
+
+---
+
+# Best Practices
+
+✔ Use **4 spaces** per indentation level.
+
+✔ Let your editor automatically indent.
+
+✔ Never mix tabs and spaces.
+
+✔ Keep indentation consistent throughout the file.
+
+✔ Do not manually align code using random spaces.
+
+---
+
+# Summary
+
+## Indentation
+
+* Python uses indentation instead of braces.
+* Indentation defines blocks of code.
+* A colon (`:`) starts a new block.
+* A block ends when indentation returns to the previous level.
+* Nested blocks use additional indentation.
+
+---
+
+## Key Points
+
+* No curly braces (`{}`).
+* No mandatory semicolons (`;`).
+* Indentation is part of Python's syntax.
+* PEP 8 recommends **4 spaces**.
+* Never mix tabs and spaces.
+* Incorrect indentation raises `IndentationError` or `TabError`.
+
+---
+
+# Comment
+
+Many beginners think indentation is just for making code look neat.
+
+It is **not**.
+
+In Python:
+
+> **Indentation changes the meaning of your program.**
+
+Two programs with the same statements but different indentation can produce completely different behavior.
+
+---
+
+**Next:** **Chapter 11 – Decision Making (`if`, `elif`, `else`)**, where we'll use indentation extensively to control the flow of program execution. This chapter will incorporate everything from the transcript, including branching, login examples, nested `if`, email validation, logical operators in conditions, and best practices.
