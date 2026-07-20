@@ -1,17 +1,17 @@
 # Aziro — Theory Questions: Answers & Revision Notes
 
-| # | Question | Outcome |
-|---|----------|---------|
-| Q3 | What are Decorators? | ✅ Answered |
-| Q4 | What are Generators? | ❌ Could not answer |
-| Q5 | What is an abstract method? | ✅ Answered |
-| Q6 | What is a class method? | ❌ Could not answer |
-| Q7 | What is the super() method? | ✅ Answered |
-| Q8 | What is inheritance? | ✅ Answered |
+| # | Question |
+|---|----------|
+| t1 | What are Decorators? |
+| t2 | What are Generators? |
+| t3 | What is an abstract method? |
+| t4 | What is a class method? |
+| t5 | What is the super() method? |
+| t6 | What is inheritance? |
 
 ---
 
-## Q3 — Decorators ✅
+## t1 — Decorators
 
 A decorator is a function that wraps another function to extend its behaviour without modifying it directly.
 A decorator is a tool that lets you add new behavior to an existing function without changing the actual code.
@@ -34,7 +34,7 @@ greet("Alice")
 
 ---
 
-## Q4 — Generators ❌
+## t2 — Generators
 
 A generator is a function that uses `yield` instead of `return`. It returns a **generator object** that produces values one at a time (lazy evaluation) — memory efficient for large sequences.
 A generator returns an iterator object, allowing it to produce a sequence of values one at a time only when req uested.
@@ -57,7 +57,7 @@ Key differences vs a regular function:
 
 ---
 
-## Q5 — Abstract Method ✅
+## t3 — Abstract Method
 
 An abstract method is a method declared in a base class with no implementation, forcing subclasses to provide one. Defined using `@abstractmethod` from the `abc` module.
 Abstract method is used to make a method mandatory for use in child class.
@@ -79,7 +79,7 @@ Instantiating `Animal` directly raises `TypeError`.
 
 ---
 
-## Q6 — Class Method ❌
+## t4 — Class Method
 
 A class method is decorated with `@classmethod` and receives `cls` (the class itself) as its first argument instead of `self` (the instance). Can be called on the class directly.
 A class method allows function to access and modify class attributes using cls
@@ -115,7 +115,7 @@ Comparison:
 
 ---
 
-## Q7 — super() ✅
+## t5 — super()
 
 `super()` returns a proxy object that delegates method calls to a parent class. Used to call the parent's `__init__` or any overridden method.
 `super()` is used in a child class to access methods or constructor of a parent class. It is useful when a child class overrides a parent method but still wants to execute the parent class logic for some part of the functionality.
@@ -133,7 +133,7 @@ class Dog(Animal):
 
 ---
 
-## Q8 — Inheritance ✅
+## t6 — Inheritance
 
 Inheritance allows a class (child) to acquire attributes and methods of another class (parent), enabling code reuse and hierarchy.
 
