@@ -1,7 +1,7 @@
 # InfoBeans — Theory Questions: Answers & Revision Notes
 
-| # | Question | Outcome |
-|---|----------|---------|
+| # | Question |
+|---|----------|
 | t1 | Difference between list, set and dictionary |
 | t2 | Give an example of inheritance |
 | t3 | Give an example of super() |
@@ -27,7 +27,7 @@ The important point and the one interviewrs push on: Immutable does not mean "ca
 `list, tuple and dict values accept anything` - mutable or immutable, mixed freely.
 
 ```python
-mixed = [1, "a", [2, 3], ["k": "v"], (4, 5)]            # Fine
+mixed = [1, "a", [2, 3], {"k": "v"}, (4, 5)]            # Fine
 record = (1, "a", [2, 3])                               # Tuple holding a mutable list - fine
 d = {"key": [1, 2, 3]}                                  # dict value is mutable list - fine
 ```
@@ -52,7 +52,7 @@ t[0] = 99               #TypeError: 'tuple' object does not support item assignm
 ```
 
 Both are consistent: rebinding a slot is forbidden, mutataing the object is a slot is not.
-This has direct consquence - such tuple is no longer hashable, so it can not be a set element or dict key:
+This has direct consequence - such tuple is no longer hashable, so it can not be a set element or dict key:
 
 ```python
 hash((1, 2))            # fine
@@ -61,7 +61,7 @@ hash((1, [2]))          # TypeError: unhashable type: 'list'
 
 A tuple is hashable if only every item inside it is hashable.
 
-### fronzenset - the immutable set
+### frozenset - the immutable set
 
 ```python
 fs = frozenset([1, 2, 3])
@@ -72,7 +72,7 @@ Because a normal `set` is mutable, it is unhashable, so it can not be nested ins
 
 ### Order preserving dedupe
 
-`set` drops duplicates, but looses ordering, so the two are combined:
+`set` drops duplicates, but loose ordering, so the two are combined:
 
 ```python
 nums = [3, 1, 3, 2]
@@ -82,7 +82,7 @@ print(list(dict.fromkeys(nums)))    # [3, 1, 2] - duplicates gone, order preserv
 
 ## t2 — Inheritance
 
-Inheritance lets a chile clss aquire the attributes and methods of a parent class, so shared behavior is written once and specialised where it differs
+Inheritance lets a child class aquire the attributes and methods of a parent class, so shared behavior is written once and specialised where it differs
 
 ```python
 class Employee:
@@ -94,7 +94,7 @@ class Employee:
         return f"{self.name} ({self.emp_id})"
 
     def access_level(self):
-        return "Standad"
+        return "Standard"
 
 class Manager(Employee):                        # Manager inherits from Employee
     def access_level(self):                     # Overrides the parent method           
@@ -106,7 +106,7 @@ m = Manager("Ravi", "E102")
 print(e.describe())                             # Asha (E101)
 print(m.describe())                             # Ravi (E102)
 print(e.access_level())                         # Standard
-print(m.access_level())                         Elevated
+print(m.access_level())                         # Elevated
 ```
 
 Manager never defines `describe()`; it comes from `Employee`. Only the behavior that actually differs (`access_level`) is redefined.
