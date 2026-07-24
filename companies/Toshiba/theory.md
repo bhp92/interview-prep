@@ -188,3 +188,20 @@ Machine Instructions
         ▼
 CPU
 ```
+
+## t5 - What makes a REST API REStful
+
+`REST = Representational State Transfer` - an architectural style for networked APIs, not a protocol. An API is "RESTful" when it follows REST's contraints:
+
+- **Clien-server**: clean separation of concerns.
+- **Statelessness**: each request carries everything needed to server it; tthe server keeps no client session between requests.
+- **Uniform interface**: resources are named by URIs(`/drive/42`), and standard HTTP verbs express intent:
+        - `GET` - read
+        - `POST` - create
+        - `PUT`/`PATCH` - update (full/partial)
+        - `DELETE` - remove
+- **Cachable**: responses declare wheather they can be cached.
+- **Layered system**: client can't tell if it's talking to the origin server or a proxy.
+- **Code on demand(optional)**: server may return executable code.
+
+Concretely, RESTful means: resources (nouns) in the URL, HTTP verbs for the action meaningful status codes(`200`,`201`,`404`,`500`) and representations exhanged as JSON. The common anti-pattern is putting verbs in the URL - `POST /getDrive?id=42` is not RESTful; `GET /drives/42` is.
