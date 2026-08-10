@@ -384,45 +384,6 @@ Begin with:
 
 ---
 
-## Progress by Phase
-
-| Phase | Status | Estimated Remaining |
-|---|---|---:|
-| Phase 1 — Regex Fundamentals | 🟡 In Progress | ~30–45 min |
-| Phase 2 — Groups & Extraction | ⬜ Not Started | ~30–45 min |
-| Phase 3 — Python Regex | ⬜ Not Started | ~60–90 min |
-| Phase 4 — Shell Regex | ⬜ Not Started | ~60–90 min |
-| Phase 5 — Advanced Practical Regex | ⬜ Not Started | ~30–45 min |
-| Phase 6 — Regex Engineering | ⬜ Not Started | ~30–45 min |
-
-The estimates are approximate. Exercises and understanding take
-priority over the clock.
-
----
-
-## Immediate Next Step
-
-Complete greedy and lazy quantifier practice.
-
-In particular, properly understand the difference between:
-
-```regex
-<.*>
-```
-
-and:
-
-```regex
-<.*?>
-```
-
-using simple input containing multiple angle-bracketed sections.
-
-Do not move to capturing groups until greedy vs lazy matching has
-been explained, practiced, and demonstrated as understood.
-
----
-
 ## Current Repository State
 
 `01_regex_fundamentals.md` currently contains the material the user
