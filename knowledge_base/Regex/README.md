@@ -600,5 +600,3 @@ README.md
 03_bash_regex.md
 05_exercises.md
 ````
-
-and use the **Continuation Prompt**.
