@@ -562,51 +562,6 @@ and determine the actual state from those files.
 
 ---
 
-# Current Immediate Next Step
-
-The immediate next topic is:
-
-## Lazy Quantifiers
-
-The user has already seen:
-
-```regex
-*?
-+?
-??
-{n,m}?
-```
-
-but has NOT yet properly learned or practiced them.
-
-Therefore the next lesson should begin by explaining greedy matching
-with a very simple example and then introduce lazy matching.
-
-Do NOT simply repeat the Markdown definition.
-
-The user should first understand a concrete example such as the
-difference between:
-
-```regex
-<.*>
-```
-
-and:
-
-```regex
-<.*?>
-```
-
-using a simple input containing multiple angle-bracketed sections.
-
-Then provide exercises that require the user to predict what each
-pattern matches.
-
-Only after the user demonstrates understanding should the lazy
-quantifier section be considered completed.
-
----
-
 # End Goal
 
 By the end of this project, I should be able to:
